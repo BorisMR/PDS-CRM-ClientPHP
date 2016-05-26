@@ -6,7 +6,7 @@
     }else{
         session_unset();
         session_destroy();
-        header('Location: /PDS-CRM/formLogin.php');
+        header('Location: /PDS-CRM-ClientPHP/formLogin.php');
     }
   
     echo '<link rel="stylesheet" href="css/bootstrap.min.css">';
