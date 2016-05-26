@@ -1,5 +1,13 @@
 <?php
     session_start();
+    
+    if( $_SESSION["session"] == 's'){
+        header('Location: /PDS-CRM-ClientPHP/Index.php');
+
+    }else{
+        $_SESSION["status"] = "Inicie sesión";
+        $status = $_SESSION["status"];
+    }
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -9,11 +17,14 @@
     <title>Ingreso a plataforma</title>
 </head>
 <body>
-    
-    
     <div class="container">
+        <div class="row" id="pwd-container">
+        <div class="col-md-4"></div>
+    
+        <div class="col-md-4">
         <h2><b>Login</b></h2>
-        <h3>Ingresar Datos de Usuario</h3>
+        <br>
+        <?php echo '<h3 class="alert alert-danger">'.$status.'</h3>';?>    
         <form class="form-horizontal" action="verificarUsuario.php" method="GET">
             <div class="form-group">
                 <label for="usser">Usuario:</label>
@@ -27,6 +38,12 @@
                 <button type="submit" class="btn btn-primary">Ingresar</button>
             </div>
         </form>
+        
+        </div>
+        </div>
+        </div>
     </div>
+
+    
 </body>
 </html>

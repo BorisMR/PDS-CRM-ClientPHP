@@ -34,11 +34,12 @@
         if( $resultado == 's'){
             $_SESSION['username'] = $usser;
             $_SESSION['session'] = $resultado;
-            header('Location: /PDS-CRM/Index.php');
+            header('Location: /PDS-CRM-ClientPHP/Index.php');
         }else{
             session_unset();
             session_destroy();
-            header('Location: /PDS-CRM/formLogin.php');
+            $_SESSION['status'] = 'Usuario invalido';
+            header('Location: /PDS-CRM-ClientPHP/formLogin.php');
         }
 
     }else{
@@ -46,6 +47,6 @@
         session_destroy();
          //$txt = "mensaje?"
             //formLogin.php?msg=txt
-        header('Location: /PDS-CRM/formLogin.php');
+        header('Location: /PDS-CRM-ClientPHP/formLogin.php');
     }
 ?>
