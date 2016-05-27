@@ -13,15 +13,15 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"></link>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-    <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
-    
+    <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>    
     <script type="text/javascript" src="js/validator.js"></script>
+
     <title>Búsqueda Avanzada de Contactos</title>
 </head>
 <body>
