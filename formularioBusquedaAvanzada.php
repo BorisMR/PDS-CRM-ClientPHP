@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"></link>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
@@ -29,7 +29,7 @@
     
     <div class="container">
         <h3>Ingresar Datos Persona</h3>
-        <form class="form-horizontal" action="buscarAvanzado.php" method="get" id="formularioBusquedaAvanzada">
+        <form class="form-horizontal" action="buscarAvanzado.php" method="POST" id="formularioBusquedaAvanzada">
             <div class="form-group">
                 <label for="run">Run:</label>
                 <input type="text" class="form-control" id="run" name="run">

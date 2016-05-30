@@ -29,26 +29,26 @@
     $direccion = "";
     $genero = "";
 
-    if(isset($_GET['run'])){
-        $run=$_GET['run'] ;
+    if(isset($_POST['run'])){
+        $run=$_POST['run'] ;
     }
-    if(isset($_GET['nombre'])){
-        $nombre=$_GET['nombre'];
+    if(isset($_POST['nombre'])){
+        $nombre=$_POST['nombre'];
     }
-    if(isset($_GET['apellido'])){
-        $apellido=$_GET['apellido'];
+    if(isset($_POST['apellido'])){
+        $apellido=$_POST['apellido'];
     }
-    if(isset($_GET['email'])){
-        $email=$_GET['email'] ;
+    if(isset($_POST['email'])){
+        $email=$_POST['email'] ;
     }
-    if(isset($_GET['fono'])){
-        $fono=$_GET['fono'] ;
+    if(isset($_POST['fono'])){
+        $fono=$_POST['fono'] ;
     }
-    if(isset($_GET['direccion'])){
-        $direccion=$_GET['direccion'] ;
+    if(isset($_POST['direccion'])){
+        $direccion=$_POST['direccion'] ;
     }
-    if(isset($_GET['genero'])){
-        $genero=$_GET['genero'] ;
+    if(isset($_POST['genero'])){
+        $genero=$_POST['genero'] ;
     }
 
     $busquedaAvanzada = "";

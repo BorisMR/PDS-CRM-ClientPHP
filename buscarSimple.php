@@ -10,10 +10,8 @@
     }
   
     echo '<link rel="stylesheet" href="css/bootstrap.min.css">';
-
     echo '<script type="text/javascript" src="js/bootstrap.min.js"></script>';
-
-    echo "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>";
+    echo '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">';
 
     set_include_path(get_include_path() . PATH_SEPARATOR . realpath(dirname(__FILE__) . "/../service/application/"));
     
@@ -22,8 +20,8 @@
 
     $textoABuscar = "";
 
-    if ( isset($_GET['textoBusqueda']) ) {
-        $textoABuscar = $_GET['textoBusqueda'];
+    if ( isset($_POST['textoBusqueda']) ) {
+        $textoABuscar = $_POST['textoBusqueda'];
         $textoABuscar = str_replace(" ","",$textoABuscar);
 
         $textoABuscar = strtolower($textoABuscar); //tolower
@@ -38,7 +36,11 @@
             $persona = json_decode($response->busquedaSimpleReturn);
 
             ?>
-            <?php echo '<h3>Saludos: '.$name.'</h3><br><br>'; ?>
+            
+            <div class="container"><br>
+            <div class="page-header">
+            <h1>CRM<small class="alert alrt-success"><?php echo 'Saludos: <b>'.$name.'</b>'; ?></small></h1>
+            </div>
             <h2><b>Busqueda Simple</b></h2>
             <div class="table">
                 <table class="table table-bordered table-hover table-responsive">
@@ -54,7 +56,6 @@
                     </tr>
                         
                     <?php
-
                         foreach($persona as $obj){
                             
                             $idP = $obj->idP;
@@ -66,9 +67,7 @@
                             $direccion = $obj->direccion;
                             $genero = $obj->genero;
                             $foto = $obj->foto_b64;
-
                     ?>
-
                         <tr>
                             <td><?php echo $run?></td>
                             <td><?php echo $nombre?></td>
@@ -77,14 +76,11 @@
                             <td><?php echo $fono?></td>
                             <td><?php echo $direccion?></td>
                             <td><?php echo $genero?></td>
-                        
-
                         <?php 
-
                             $foto;
                             
-                            if ($foto!= null){
-                                $foto = '<td id="decode" onLoad="decodeImage();"><img src='. $foto .' width="80px" style="border-rounded: 100px;"></td>';
+                            if ($foto != null){
+                                $foto = '<td id="decode" onLoad="decodeImage();"><img src='.$foto.' width="80px" style="border-rounded: 100px;"></td>';
                             }
                             else{
                                 $foto = '<td><img src="image/img_usuario.png" width="80px" style="border-rounded: 100px;"></td>';
@@ -93,26 +89,17 @@
                             echo $foto;
 
                             echo '<td><button value='.$idP.' class="btn btn-primary" onclick="infoPerfil('.$idP.')">Info</button></td>';
-
-
                         ?>
-
-                            
-                        </tr>
-                        
-                        <?php
-                        
+                        </tr>                        
+                        <?php                        
                         }
-                    
-                        ?>
-                    
+                        ?>                    
                 </table>
             </div>
             <hr>
             <a href="Index.php" class="btn btn-primary">Volver</a>
+            </div>
             <?php
-
         }
     }
-
 ?>

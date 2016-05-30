@@ -13,8 +13,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ingreso a plataforma</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Formulario de Ingreso</title>
 </head>
 <body>
     <div class="container">
@@ -24,8 +24,8 @@
         <div class="col-md-4">
         <h2><b>Login</b></h2>
         <br>
-        <?php echo '<h3 class="alert alert-danger">'.$status.'</h3>';?>    
-        <form class="form-horizontal" action="verificarUsuario.php" method="GET">
+        <?php echo '<h3 class="alert alert-warning">'.$status.'</h3>';?>    
+        <form class="form-horizontal" action="verificarUsuario.php" method="POST">
             <div class="form-group">
                 <label for="usser">Usuario:</label>
                 <input type="text" class="form-control" id="usser" name="usser">
@@ -37,13 +37,9 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Ingresar</button>
             </div>
-        </form>
-        
+        </form>        
         </div>
         </div>
-        </div>
-    </div>
-
-    
+    </div>  
 </body>
 </html>

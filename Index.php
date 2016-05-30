@@ -25,11 +25,13 @@
 		<h2>Buscadores</h2>
 		<div class="panel">
 			<table class="table table-responsive">	
+				<!--
 				<tr>
 					<td>
 						<a href="formBusquedaPorRut.php" class="btn btn-info">Busqueda Por Rut</a>
 					</td>
 				</tr>
+				-->
 				<tr>		  				
 					<td>
 						<a href="formularioBusquedaSimple.php" class="btn btn-info">Busqueda Simple</a>
@@ -42,7 +44,5 @@
 		  	<a href="logout.php" class="btn btn-danger">Logout</a>
 		</div>	
 	</div>
-
-    	
 </body>
 </html>

@@ -22,8 +22,8 @@
 
     $rutABuscar = "";
 
-    if ( isset($_GET['rutBusqueda']) ) {
-        $rutABuscar = $_GET['rutBusqueda'];
+    if ( isset($_POST['rutBusqueda']) ) {
+        $rutABuscar = $_POST['rutBusqueda'];
         $rutABuscar = str_replace(" ","",$rutABuscar);
 
         $rutABuscar = strtolower($rutABuscar);
